@@ -1,6 +1,6 @@
 
 import React from 'react';
-import './Styles/Landing.css'
+import '../../LandingPage/Styles/Landing.css'
 
 const Header = () => {
     return (
