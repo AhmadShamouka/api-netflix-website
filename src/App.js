@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Sections from './LandingPage/Components/Sections';
 import FAQSection from './LandingPage/Components/FAQSection';
 import Footer from './LandingPage/Components/Footer';
+import Login from './LoginPage/Components/Login';
 
 
 function App() {
@@ -22,7 +23,11 @@ function App() {
                <Footer/>
             </React.Fragment>
           }/>
-         
+          <Route path="/login" element={
+            <React.Fragment>
+              <Login/>
+            </React.Fragment>
+          }/>
       
         </Routes>
       </Router>
