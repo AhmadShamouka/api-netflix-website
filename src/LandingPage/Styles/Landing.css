@@ -386,6 +386,11 @@ footer {
   position: relative;
 }
 
+.footer__row{
+ display: flex;
+ gap: 15%;
+}
+
 .dropdown__container{
    border: 1px solid white;
   border-radius: 4px;
@@ -409,6 +414,11 @@ footer {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap:20px;
+}
+
+.column__1{
+  gap: 10%;
+  margin: 0px 0px 16px ;
 }
 /* Footer Row 1 Styles */
 .footer__row__1 > h4 {

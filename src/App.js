@@ -35,27 +35,6 @@ function App() {
         </Routes>
       </Router>
     </React.Fragment>
-  //   <Router>
-  //   <div className="App">
-  //     <Routes>
-  //     <Route path="/login" element={
-  //           <React.Fragment>
-  //             <Login/>
-  //           </React.Fragment>
-  //         }/>
-  //     </Routes>
-  //   </div>
-  // </Router>
-    // <div className="App">
-    // <Header/>
-    // <Hero/>
-    // <SectionOne/>
-    // <SectionTwo/>
-    // <SectionThree/>
-    // <SectionFour/> 
-    // <FAQSection/>
-    // <Footer/>
-    // </div>
   );
 }
 
