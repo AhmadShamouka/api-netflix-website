@@ -1,3 +1,4 @@
+
 import "./App.css";
 import React from 'react';
 import Header from './LandingPage/Components/Header.js';
@@ -11,6 +12,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Similler from './Watch-component/Similler.js';
 function App() {
   return( <div className="App">
+
 
     {/* <React.Fragment>
       <Router>
