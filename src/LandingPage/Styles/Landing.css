@@ -88,57 +88,6 @@ body {
   display: flex;
   
 }
-/* Hero Section Styles */
-.hero__bg__image__container {
-  width: 100%;
-  height: 80vh;
-}
-
-.hero__bg__image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.hero__bg__overlay {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 80vh;
-  background: rgba(0, 0, 0, 0.4);
-  background-image: linear-gradient(
-      to top,
-      rgba(0, 0, 0, 0.8) 0,
-      rgba(0, 0, 0, 0) 60%,
-      rgba(0, 0, 0, 0.8) 100%
-  );
-}
-
-.hero__card {
-  position: absolute;
-  top: 20%;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.hero__title {
-  font-weight: 1000;
-  width: 100%;
-  font-size: 3rem;
-}
-
-.hero__subtitle,
-.hero__description {
-  font-weight: 400;
-  font-size: 1rem;
-}
-
-.hero__description {
-  margin: 0 50px;
-}
-
 /* Email Input Styles */
 .email__input {
   border: none;
