@@ -29,7 +29,7 @@ function Watch() {
  const base_url = 'https://images.tmdb.org/t/p/original/';
   return (
     <div className='Watch'>
-  <section className="watch-header">
+  {/* <section className="watch-header">
   <div className='background-watch' style={{ backgroundImage: `url(${base_url}${movie.backdrop_path})` }}>
    
       <div className="container-watch">   
@@ -81,10 +81,10 @@ function Watch() {
               <button className="net-watch-btn-red" type="submit" role="link">JOIN NOW</button>
             </div>
           </div>
-      </div>
+      </div> 
 
   </section>
-
+*/}
 
 
 

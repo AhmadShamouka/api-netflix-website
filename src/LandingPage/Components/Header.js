@@ -1,7 +1,7 @@
 
 import React from 'react';
 import '../../LandingPage/Styles/Landing.css'
-
+import { Link } from 'react-router-dom';
 const Header = () => {
     return (
   
@@ -35,9 +35,11 @@ const Header = () => {
             </div>
          </div>
   
-            <div className="nav__item">
-              <a className="signin__button">Sign in</a>
-            </div>
+         <div className="nav__item">
+            <Link to="/login" className="signin__button">
+              Sign in
+            </Link>
+    </div>
           </div>
         </nav>
       </header>

@@ -18,7 +18,7 @@ function Upcoming() {
         const data = await response.json();
         setupcoming(data);
 
-        // Log the response to the console
+        
         console.log('API Response:', data);
       } catch (error) {
         console.error('Error fetching text data:', error);
@@ -29,24 +29,25 @@ function Upcoming() {
   }, []);
 
   return (
-    <section className='comingsoon-watch'>
-      <div className='details-header'>
-        <h2>Coming Soon</h2>
-      </div>
+    // <section className='comingsoon-watch'>
+    //   <div className='details-header'>
+    //     <h2>Coming Soon</h2>
+    //   </div>
 
-      <div className="coming-soon-container">
-        {upcoming &&
-          upcoming.results &&
-          upcoming.results.slice(7, 11).map((movie) => (
-            <div key={movie.id} className="coming-soon-link">
-              <a href={`/lb-en/title/${movie.id}`}>
-                <div className="coming-soon-title ">{movie.original_title}</div>
-                <div className="coming-soon-synopsis">{movie.overview}</div>
-              </a>
-            </div>
-          ))}
-      </div>
-    </section>
+    //   <div className="coming-soon-container">
+    //     {upcoming &&
+    //       upcoming.results &&
+    //       upcoming.results.slice(7, 11).map((movie) => (
+    //         <div key={movie.id} className="coming-soon-link">
+    //           <a href={`/lb-en/title/${movie.id}`}>
+    //             <div className="coming-soon-title ">{movie.original_title}</div>
+    //             <div className="coming-soon-synopsis">{movie.overview}</div>
+    //           </a>
+    //         </div>
+    //       ))}
+    //   </div>
+    // </section>
+    a
   );
 }
 
