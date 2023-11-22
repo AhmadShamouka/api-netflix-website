@@ -16,7 +16,7 @@ function App() {
     <React.Fragment>
       <Router>
         <Routes>
-          <Route path="/" element={
+          {/* <Route path="/" element={
             <React.Fragment>
               <Header/>
               <Hero/>
@@ -31,7 +31,7 @@ function App() {
               <LoginFooter/>
             </React.Fragment>
           }/>
-      
+       */}
         </Routes>
       </Router>
     </React.Fragment>
