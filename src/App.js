@@ -7,7 +7,8 @@ import './Header-footer/rachad-header-component/rachad-header.css';
 function App() {
   return (
     <div className="App">
-      
+      <Header />
+      <Footer />
     </div>
   );
 }

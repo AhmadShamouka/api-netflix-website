@@ -32,10 +32,7 @@
     color: #ffffff;
     background: #E50914;
     margin: 0px 0px 0px 8px;
-    padding: 9px 20px;
-    width: 112px;
-    height: 33px;
-    line-height: 15px;
+    padding: 6px 14px;
     font-size: 12px;
     border-radius: 2px;
     text-align: center;
@@ -45,14 +42,20 @@
 .R-sign-in {
     color: #ffffff;
     margin: 0px 0px 0px 8px;
-    padding: 9px 20px;
+    padding: 6px 14px;
     font-weight: 400;
-    line-height: 12px;
     border-radius: 2px;
     font-size: 13px;
     background-color: transparent;
-    width: 91px;
-    height: 33px;
     border: 1px solid #888;
+}
 
+@media (max-width: 400px) {
+    .R-join-now, .R-sign-in {
+        font-size: 8px;
+    }
+
+    .R-unlimited {
+        font-size: 8px;
+    }
 }
