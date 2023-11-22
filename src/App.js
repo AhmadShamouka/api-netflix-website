@@ -5,6 +5,7 @@ import Hero from './LandingPage/Components/Hero';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Sections from './LandingPage/Components/Sections';
 import FAQSection from './LandingPage/Components/FAQSection';
+import Footer from './LandingPage/Components/Footer';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
               <Hero/>
                <Sections/>
                <FAQSection/>
+               <Footer/>
             </React.Fragment>
           }/>
          
