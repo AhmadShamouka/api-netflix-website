@@ -2,8 +2,9 @@
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import '@fontsource/poppins'; // Import Poppins font
 import '@fortawesome/fontawesome-free/css/all.css'; // Import Font Awesome styles
+import './Styles/Landing.css'
 import React from 'react';
-import './Landing.css'
+
 
 const Hero = () => {
   return (
