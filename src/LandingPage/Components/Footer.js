@@ -16,20 +16,22 @@ const Footer = () => {
               <a>Privacy</a>
               <a>Speed Test</a>
             </div>
-            <div className="column__2">
+            <div className="column__1">
               <a>Help Center</a>
+              <br/>
               <a>Jobs</a>
               <a>Cookie Preferences</a>
               <a>Legal Notices</a>
             </div>
-            <div className="column__3">
+            <div className="column__1">
               <a>Account</a>
               <a>Ways to Watch</a>
+              <br/>
               <a>Corporate Information</a>
               <a>Only on Netflix</a>
             </div>
-            <div className="column__4">
-              <a>Media Centre</a>
+            <div className="column__1">
+              <a>Media Center</a>
               <a>Terms of Use</a>
               <a>Contact Us</a>
             </div>

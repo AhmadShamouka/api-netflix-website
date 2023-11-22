@@ -344,7 +344,7 @@ body {
 /* FAQ List Container Styles */
 .FAQ__list__container {
   border-top: 8px solid #222;
-  padding: 2rem 0;
+  padding: 2rem ;
 }
 
 .FAQ__heading {
@@ -625,10 +625,12 @@ footer a{
   }
 
   footer {
-      padding: 2rem 20rem;
+      padding: 2rem 8rem;
       justify-content: flex-start;
       text-align: left;
       align-items: flex-start;
+      overflow: hidden;
+
   }
 
   .footer__row__2 {
@@ -642,4 +644,10 @@ footer a{
   .footer__row__4 {
       align-self: flex-start;
   }
+}
+
+.column__1  a{
+  margin-bottom:1rem ;
+  display: inline-block;
+white-space: nowrap;
 }
