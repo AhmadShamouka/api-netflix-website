@@ -7,6 +7,7 @@ import Sections from './LandingPage/Components/Sections';
 import FAQSection from './LandingPage/Components/FAQSection';
 import Footer from './LandingPage/Components/Footer';
 import Login from './LoginPage/Components/Login';
+import LoginFooter from './LoginPage/Components/LoginFooter';
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
           <Route path="/login" element={
             <React.Fragment>
               <Login/>
+              <LoginFooter/>
             </React.Fragment>
           }/>
       

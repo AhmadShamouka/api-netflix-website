@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../../LandingPage/Styles/Landing.css'
+import '../../LoginPage/Styles/Login.css'; 
 
 const Login = () => {
   const [inputTouched, setInputTouched] = useState({
@@ -67,10 +67,12 @@ const Login = () => {
   };
 
   return (
+    
     <div className="upper">
+         
       <div className="logo">
         <a href="#">
-          <img src="img/Netflix-Logo.png" className="img-logo" alt="Netflix Logo" />
+          <img  src="https://www.freepnglogos.com/uploads/netflix-logo-0.png" alt="Netflix Logo" className="img-logo" />
         </a>
       </div>
       <div className="login-div">
@@ -85,6 +87,7 @@ const Login = () => {
               onFocus={inputOnFocus}
               onBlur={inputOnBlur}
             />
+            
             <div className="warning-input" id="warningEmail">
               Please enter a valid email or phone number.
             </div>
@@ -120,12 +123,7 @@ const Login = () => {
               </a>
             </div>
           </div>
-          <div className="login-face">
-            <img src="img/fb-icon.png" height="20" alt="Facebook Icon" />
-            <a href="#" className="color_link log_face">
-              Login with Facebook
-            </a>
-          </div>
+          <div><br/></div>
           <div className="new-members">
             New to Netflix? <a href="#" className="signup-link">Sign up now</a>.
           </div>
