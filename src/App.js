@@ -8,14 +8,15 @@ import Footer from './LandingPage/Components/Footer.js';
 import Login from './LoginPage/Components/Login.js';
 import LoginFooter from './LoginPage/Components/LoginFooter.js';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Similler from './Watch-component/Similler.js';
+import MoviesPage from "./MoviesPage/MoviesPage.js";
+import WatchPage from "./Watch-component/WatchPage.js";
+
 function App() {
   return( <div className="App">
 
-    {/* <React.Fragment>
+    <React.Fragment>
       <Router>
-        <Routes>
-            
+        <Routes>   
           <Route path="/" element={
             <React.Fragment>
               <Header/>
@@ -32,11 +33,20 @@ function App() {
               <LoginFooter/>
             </React.Fragment>
           }/>
-
+          <Route path="/watch/:id" element={
+            <React.Fragment>
+             <WatchPage/>
+            </React.Fragment>
+          }/>
+            <Route path="/movies" element={
+            <React.Fragment>
+             <MoviesPage/>
+            </React.Fragment>
+          }/>
           </Routes>
           </Router>
-    </React.Fragment> */}
-    <Similler/>
+    </React.Fragment>
+    
   </div>);
 }
 export default App;

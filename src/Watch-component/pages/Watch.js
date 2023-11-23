@@ -1,35 +1,43 @@
 import React, { useState, useEffect } from 'react';
-import './styles/Watch.css'
-import logo from './assets/netlog.png'
+import '../styles/Watch.css';
+import logo from '../assets/netlog.png'
+import { useParams } from 'react-router-dom';
 
 function Watch() {
+  const { id } = useParams();
+  const movieId = parseInt(id, 10);
   const [movie, setMovie] = useState(null);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(
-          'https://api.themoviedb.org/3/movie/251?language=en-US&api_key=13956b67d71217236ba5306171319b71'
-        );
-
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
+  
+    useEffect(() => {
+      const fetchData = async () => {
+        try {
+          const response =
+          await fetch(`https://api.themoviedb.org/3/movie/${movieId}?language=en-US&api_key=13956b67d71217236ba5306171319b71`);
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+  
+          const data = await response.json();
+          setMovie(data);
+          console.log('API Response:', data);
+        } catch (error) {
+          console.error('Error fetching movie data:', error);
         }
+      };
+  
+      fetchData();
+    }, [movieId]);
+  
+    if (!movie) {
+     
+      return <div>Loading...</div>;
+    }
 
-        const data = await response.json();
-        setMovie(data);
-        console.log('API Response:', data);
-      } catch (error) {
-        console.error('Error fetching movie data:', error);
-      }
-    };
 
-    fetchData();
-  }, []);
  const base_url = 'https://images.tmdb.org/t/p/original/';
   return (
     <div className='Watch'>
-  {/* <section className="watch-header">
+  <section className="watch-header">
   <div className='background-watch' style={{ backgroundImage: `url(${base_url}${movie.backdrop_path})` }}>
    
       <div className="container-watch">   
@@ -63,7 +71,7 @@ function Watch() {
             </div>
             <div className='title-desc-watch-2'>
             <span className='desc-title'>Starring:</span>
-            <span className='desc-text'>Al Pacino, Steven Bauer, Michelle Pfeiffer</span>
+            <span className='desc-text'>Michelle Pfeiffer</span>
             </div>
           </div>
         </div>
@@ -81,10 +89,10 @@ function Watch() {
               <button className="net-watch-btn-red" type="submit" role="link">JOIN NOW</button>
             </div>
           </div>
-      </div> 
+      </div>  
 
   </section>
-*/}
+
 
 
 

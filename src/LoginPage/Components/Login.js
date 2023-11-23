@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../../LoginPage/Styles/Login.css'; 
+import { Link } from 'react-router-dom';
 
 const Login = () => {
   const [inputTouched, setInputTouched] = useState({
@@ -108,9 +109,11 @@ const Login = () => {
           </div>
 
           <div>
+            <Link to="/movies">
             <button className="signin-button" onClick={handleSignIn}>
               Sign In
             </button>
+            </Link>
           </div>
           <div className="remember-flex">
             <div>

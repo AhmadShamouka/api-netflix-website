@@ -1,31 +1,37 @@
+import '../styles/Watch.css';
 import React, { useState, useEffect } from 'react';
-import './styles/Watch.css'
-function Credits(props) {
+import '../styles/Watch.css';
+import { useParams } from 'react-router-dom';
+function Credits() {
 
-    const [credit, setcredit] = useState(null);
-
-    useEffect(() => {
-      const detailData = async () => {
-        try {
-          const response = await fetch(
-            'https://api.themoviedb.org/3/movie/251/credits?language=en-US&api_key=13956b67d71217236ba5306171319b71'
-          );
-          if (!response.ok) {
-            throw new Error('Network response was not ok');
+    const { id } = useParams();
+    const movieId = parseInt(id, 10);
+    const [credits, setcredit] = useState(null);
+    
+      useEffect(() => {
+        const detailData = async () => {
+          try {
+            const response = await fetch(
+              `https://api.themoviedb.org/3/movie/${movieId}/credits?language=en-US&api_key=13956b67d71217236ba5306171319b71`
+            );
+            if (!response.ok) {
+              throw new Error('Network response was not ok');
+            }
+            const data = await response.json();
+            setcredit(data.cast);
+            console.log('API Response:', data.cast);
+          } catch (error) {
+            console.error('Error fetching movie data:', error);
           }
-          const data = await response.json();
-          setcredit(data);
-          console.log('API Response:', data);
-        } catch (error) {
-          console.error('Error fetching movie data:', error);
-        }
-      };
-  
-      detailData();
-    }, []);
+        };
+        
+        detailData();
+      }, [movieId]);
+      
 
-    return (
-        <section className='details-watch'>
+
+return (
+    <section className='details-watch'>
     <div className='details-header'>
     <h2>More Details</h2>
     </div>
@@ -78,24 +84,17 @@ function Credits(props) {
       <div className="more-details-cell cell-cast">
         <div className="more-details-label">Cast</div>
         <div className="more-details-item-container">
-          <span className="more-details-item item-cast">Al Pacino</span>
-          <span className="more-details-item item-cast">Steven Bauer</span>
-          <span className="more-details-item item-cast">Michelle Pfeiffer</span>
-          <span className="more-details-item item-cast">Mary Elizabeth Mastrantonio</span>
-          <span className="more-details-item item-cast">Paul Shenar</span>
-          <span className="more-details-item item-cast">Robert Loggia</span>
-          <span className="more-details-item item-cast" >Miriam Colon</span>
-          <span className="more-details-item item-cast">F. Murray Abraham</span>
-          <span className="more-details-item item-cast">Harris Yulin</span>
-          <span className="more-details-item item-cast">Ángel Salazar</span>
-          <span className="more-details-item item-cast">Pepe Serna</span>
+
+  {credits && credits.slice(0, 6).map((credit) => (
+    <span key={credit.id} className="more-details-item item-cast">
+      {credit.name}
+    </span>
+  ))} 
+</div>
+
         </div>
       </div>
-    </div>
-
-
-
-  </section>
+        </section>
     );
 }
 

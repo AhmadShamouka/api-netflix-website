@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './styles/Watch.css';
+import '../styles/Watch.css';
 
 function Upcoming() {
   const [upcoming, setupcoming] = useState(null);
@@ -29,25 +29,25 @@ function Upcoming() {
   }, []);
 
   return (
-    // <section className='comingsoon-watch'>
-    //   <div className='details-header'>
-    //     <h2>Coming Soon</h2>
-    //   </div>
-
-    //   <div className="coming-soon-container">
-    //     {upcoming &&
-    //       upcoming.results &&
-    //       upcoming.results.slice(7, 11).map((movie) => (
-    //         <div key={movie.id} className="coming-soon-link">
-    //           <a href={`/lb-en/title/${movie.id}`}>
-    //             <div className="coming-soon-title ">{movie.original_title}</div>
-    //             <div className="coming-soon-synopsis">{movie.overview}</div>
-    //           </a>
-    //         </div>
-    //       ))}
-    //   </div>
-    // </section>
-    a
+    <section className='comingsoon-watch'>
+      <div className='details-header'>
+        <h2>Coming Soon</h2>
+      </div>
+    
+      <div className="coming-soon-container">
+        { upcoming &&
+          upcoming.results &&
+          upcoming.results.slice(0,6).map((movie) => (
+            <div key={movie.id} className="coming-soon-link">
+              <a href={`/lb-en/title/${movie.id}`}>
+                <div className="coming-soon-title ">{movie.original_title}</div>
+                <div className="coming-soon-synopsis">{movie.overview}</div>
+              </a>
+            </div>
+          ))}
+      </div>
+    </section>
+    
   );
 }
 

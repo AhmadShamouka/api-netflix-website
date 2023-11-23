@@ -10,6 +10,7 @@ import "../Styles/Row.css";
 
 // import required modules
 import { Navigation } from "swiper/modules";
+import { Link } from "react-router-dom";
 
 function Row({ title, fetchURL, blurred, lang }) {
   const [movies, setMovies] = useState([]); //setting movie state to keep updating it
@@ -48,7 +49,8 @@ function Row({ title, fetchURL, blurred, lang }) {
         }
       >
         {movies.map((movie) => (
-          <SwiperSlide key={movie.id}>
+         <SwiperSlide  key={movie.id}>
+          <Link to={`/watch/${movie.id}`}>
             <div>
               <img
                 src={`${base_URL}${movie.backdrop_path}`}
@@ -59,6 +61,7 @@ function Row({ title, fetchURL, blurred, lang }) {
                 {movie.title}
               </p>
             </div>
+            </Link>
           </SwiperSlide>
         ))}
       </Swiper>

@@ -1,13 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import  './styles/Watch.css';
+import '../styles/Watch.css';
+import { useParams } from 'react-router-dom';
+
 function Similler() {
+    const { id } = useParams();
+    const movieId = parseInt(id, 10);
+
   const [similler, setSimiller] = useState(null);
 
   useEffect(() => {
     const similerFetch = async () => {
       try {
         const response = await fetch(
-          'https://api.themoviedb.org/3/movie/555/similar?language=en-US&page=1&api_key=13956b67d71217236ba5306171319b71'
+         `https://api.themoviedb.org/3/movie/${movieId}/similar?language=en-US&page=1&api_key=13956b67d71217236ba5306171319b71`
         );
 
         if (!response.ok) {
@@ -25,7 +30,7 @@ function Similler() {
     };
 
     similerFetch();
-  }, []);
+  }, [movieId]);
 
   const base_url = 'https://images.tmdb.org/t/p/original/';
 
@@ -39,7 +44,7 @@ function Similler() {
           <div className='cards-details-container'>
             { similler &&
               similler.results &&
-              similler.results.slice(2,18).map((movie) => (
+              similler.results.slice(0,18).map((movie) => (
             <a key={movie.id} className="title-link">
                   <img
                     className="title-link-img"
