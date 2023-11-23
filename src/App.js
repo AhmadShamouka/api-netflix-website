@@ -1,3 +1,4 @@
+
 import "./App.css";
 import React from 'react';
 import Header from './LandingPage/Components/Header.js';
@@ -13,8 +14,8 @@ import WatchPage from "./Watch-component/WatchPage.js";
 
 function App() {
   return( <div className="App">
-
     <React.Fragment>
+
       <Router>
         <Routes>   
           <Route path="/" element={
