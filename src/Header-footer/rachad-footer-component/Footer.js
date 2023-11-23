@@ -30,6 +30,7 @@ function Footer() {
               <li><p className='hi'>Only on Netflix</p></li>
             </ul>
           </div>
+          
           <div className="R-col4">
             <ul className="R-ul-col4">
               <li>Media Center</li>
